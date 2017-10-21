@@ -4,7 +4,7 @@ public class Queue <T extends Comparable<T>>{
     private int count;
 
     public boolean isEmpty(){
-        return first ==null;
+        return first == null;
     }
 
     public int size(){
@@ -23,6 +23,7 @@ public class Queue <T extends Comparable<T>>{
             oldLast.next = last;
         }
     }
+
     public T dequeue(){
         if(isEmpty()){
             return null;
@@ -32,7 +33,6 @@ public class Queue <T extends Comparable<T>>{
         first = first.next;
         return oldFirst;
     }
-
 
     public T peek(){
         return first.data;
