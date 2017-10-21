@@ -24,14 +24,15 @@ public class Queue <T extends Comparable<T>>{
         }
     }
     public T dequeue(){
+        if(isEmpty()){
+            return null;
+        }
         count--;
         T oldFirst = first.data;
         first = first.next;
-        if(isEmpty()){
-            this.last = null;
-        }
         return oldFirst;
     }
+
 
     public T peek(){
         return first.data;
